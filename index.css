@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --dark-cyan: hsl(158, 36%, 37%);
+    --cream: hsl(30, 38%, 92%);
+
+    /* Neutral */
+    
+    --very-dark-blue: hsl(212, 21%, 14%);
+    --dark-grayish-blue: hsl(228, 12%, 48%);
+}
+
+
+body {
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    background: var(--cream);
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1em;
+    background: white;
+    box-shadow: 1px 1px 50px gray;
+}
+
+.header {
+    width: 320px;
+    height: 100%;
+    background-image: url('images/image-product-desktop.jpg');
+    background-size: cover;
+    border-radius: 1em 0 0 1em;
+}
+
+
+img {
+    width: 320px;
+    border-radius: 1em 0 0 1em;
+    margin: 0;
+    padding: 0;
+}
+
+
+.article {
+    width: 320px;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-around;
+    gap: 1em;
+}
+
+.perfume {
+    letter-spacing: .2em;
+}
+
+.main-title {
+    font-weight: bold;
+    font-size: 2.5em;
+}
+
+.gray {
+    color: var(--dark-grayish-blue);
+}
+
+.price {
+    display: flex;
+    align-items: center;
+    gap: 2em;
+}
+
+.new-price {
+    font-size: 2em;
+    color: var(--dark-cyan);
+}
+
+.button {
+    color: white;
+    background: var(--dark-cyan);
+    padding: 1em;
+    border-radius: 1em;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    text-decoration: none;
+    width: 100%;
+    cursor: pointer;
+    font-family: 'Monserrat', sans-serif;
+
+}
+
+@media (max-width: 768px){
+    .main {
+        width: 370px;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .header {
+        height: 250px;
+        width: 100%;
+        border-radius: 1em 1em 0 0;
+    }
+    .article {
+        width: 100%;
+    }
+}
